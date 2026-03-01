@@ -20,7 +20,7 @@ y = y0 + v0 * sin(angulo) * t - 0.5 * g * t.^2;
 vx = v0 * cos(angulo) * ones(size(t)); % Velocidad en X es constante
 vy = v0 * sin(angulo) - g * t;         % Velocidad en Y cambia por la gravedad
 
-% 4. CONFIGURAR EL LIENZO ESTILO "LIBRO DE TEXTO"
+% 4. CONFIGURAR EL LIENZO
 figure('Color', 'w', 'Position', [100, 100, 800, 450]); 
 hold on; axis equal; grid off;
 set(gca, 'Visible', 'off'); 
@@ -171,6 +171,6 @@ for i = 1:length(t)
     pause(0.02); 
 end
 
-% Después del end del bucle:
 close(v); % Cerramos y guardamos el archivo
+
 fprintf('Video guardado exitosamente como: %s\n', nombre_archivo);
